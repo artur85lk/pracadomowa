@@ -23,4 +23,4 @@ public class zadanie5 {
         System.out.println("to jest Twoje BMI: " + String.format("%.2f", bmi));
     }
 }
-// czy widać mnie w github 15.43
+// czy widać mnie w github 15.43 tak
