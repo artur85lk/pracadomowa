@@ -9,32 +9,33 @@ public class Zadanie23 {
         Scanner sc = new Scanner(System.in);
 
 
-        System.out.println("Podaj dwie liczby i znak");
-        int x = sc.nextInt();
-        int y = sc.nextInt();
-        String zznak = sc.nextLine();  // nie wiem, ale bez tego nie dziala
-        String rodzajDzialania = sc.nextLine();
 
-        if ("+".equals(rodzajDzialania)) {
-            System.out.println(x + y);
-        }
-        else if("-".equals(rodzajDzialania)) {
-                System.out.println(x - y);
+        int i = 1;
+while (i < 2) {
 
-        }
-        else if ("*".equals(rodzajDzialania)) {
-            System.out.println(x * y);
+    System.out.println("Podaj dwie liczby i znak");
+    int x = sc.nextInt();
+    int y = sc.nextInt();
+    String zznak = sc.nextLine();  // nie wiem, ale bez tego nie dziala
+    String rodzajDzialania = sc.nextLine();
 
-        }
-        else if ("/".equals(rodzajDzialania)) {
-            System.out.println(x / y);
+    if ("+".equals(rodzajDzialania)) {
+        System.out.println(x + y);
+    } else if ("-".equals(rodzajDzialania)) {
+        System.out.println(x - y);
 
-        }
-        else {
-            System.out.println("Error");
-        }
+    } else if ("*".equals(rodzajDzialania)) {
+        System.out.println(x * y);
 
+    } else if ("/".equals(rodzajDzialania)) {
+        System.out.println(x / y);
 
+    } else {
+        System.out.println("Error");
+        break;
+    }
+
+}
 
 
     }
