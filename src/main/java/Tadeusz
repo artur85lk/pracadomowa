@@ -1,0 +1,39 @@
+package PanTadeusz;
+
+import javax.swing.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class Tadeusz {
+    public static void main(String[] args) {
+
+        File txt = new File("pan-tadeusz.txt"); //odczyt
+        //Scanner sc = new Scanner(System.in);
+        //String s = sc.nextLine();
+        String s = JOptionPane.showInputDialog("Szukane słowo:");
+
+        int licznik = 0;
+
+        try {
+
+            BufferedReader odczytaj = new BufferedReader(new FileReader(txt));
+            String line = "";
+            while ((line = odczytaj.readLine()) != null) {
+                Matcher m = Pattern.compile(s).matcher(line);
+                while (m.find()) {
+                    licznik++;
+                }
+            }
+            System.out.println(licznik);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+}
